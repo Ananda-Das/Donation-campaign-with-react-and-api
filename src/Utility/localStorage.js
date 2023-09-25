@@ -9,10 +9,10 @@ const getStoredDonations = () =>{
 
 const saveDonation = id =>{
     const storedDonations = getStoredDonations();
-    const exists = storedDonations.find(jobId => jobId === id);
+    const exists = storedDonations.find(donationId => donationId === id);
     if(!exists){
         storedDonations.push(id);
-        localStorage.setItem('donation', JSON.stringify(storedDonations))
+        localStorage.setItem('donation', JSON.stringify(storedDonations));
     }
 }
 

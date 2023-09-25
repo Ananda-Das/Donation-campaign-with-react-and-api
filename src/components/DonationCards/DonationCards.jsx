@@ -17,7 +17,7 @@ const DonationCards = () => {
 
   return (
     <div>
-      <div className="grid lg:grid-cols-4 px-24 grid-cols-1  gap-5 my-20 ">
+      <div className="grid lg:grid-cols-4 px-24 grid-cols-1  gap-6 my-20 ">
         {cardData.map((data, idx) => (
           <DonationCard key={idx} data={data} ></DonationCard>
         ))}
