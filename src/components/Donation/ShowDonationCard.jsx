@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 // import React from 'react';
 
+
 // eslint-disable-next-line react/prop-types
 const ShowDonationCard = ({ donation }) => {
   const { image, bgColor, title, categories, price, btnBg, btnText, detailsBtnText, textColor } = donation;
