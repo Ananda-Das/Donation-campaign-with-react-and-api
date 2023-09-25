@@ -10,24 +10,13 @@ const DonationDetails = () => {
   const donations = useLoaderData();
   const { id } = useParams();
 
-  const donationDetails = donations.find((donation) => donation.id == id);
+  const idInt = parseInt(id);
 
-    // const handleDonation = () =>{
-    //     toast.success('You donate Successfully');
-
-    //     const { storedDonations } = useGetLocalDonation("donated_campaigns");
-
-    //     const [allStoredDonations, setAllStoredDonations] = useState([]);
-        
-    // }
-
-    // const { storedDonations } = useGetLocalDonation("donated_campaigns");
-
-    // const [allStoredDonations, setAllStoredDonations] = useState([]);
+  const donationDetails = donations.find((donation) => donation.id == idInt);
 
     const handleDonation = () => {
 
-        if(!saveDonation(id)){
+        if(!saveDonation(idInt)){
             toast.error('Already Donated');
         }else{
             toast.success('Thank you for donate');
