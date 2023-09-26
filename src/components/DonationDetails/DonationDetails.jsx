@@ -17,9 +17,9 @@ const DonationDetails = () => {
   const handleDonation = () => {
     const save = saveDonation(id, price);
     if (save) {
-      toast.success("You Donate");
+      toast.success("You succesfully Donate");
     } else {
-      toast.error('dsklfaj');
+      toast.error('You have Already Donated');
     }
   };
 
