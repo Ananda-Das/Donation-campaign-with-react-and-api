@@ -15,7 +15,7 @@ const DonationCard = ({data}) => {
             <div >
                 <div style={{backgroundColor:bgColor}} className=" w-72  rounded-lg h-72 shadow-md hover:shadow-xl">
                     <div className="lg:w-72   rounded-lg ">
-                        <img className="h-48" src={image} alt="" />
+                        <img className="h-48 w-full" src={image} alt="" />
                     </div>
                     <div className="p-5">
                         <h1 style={{backgroundColor:btnBg,color:btnText}}
