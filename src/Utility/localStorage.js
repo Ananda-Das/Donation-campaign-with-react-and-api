@@ -6,15 +6,31 @@ const getStoredDonations = () =>{
     return [];
 }
 
+const getDonationPrice = () =>{
+    const data = localStorage.getItem('price');
+    if(data){
+        return JSON.parse(data);
+    }
+    return [];
+}
 
-const saveDonation = id =>{
+const saveDonation = (id,price) =>{
     const storedDonations = getStoredDonations();
+    const donationPrice = getDonationPrice();
     const exists = storedDonations.find(donationId => donationId === id);
     if(!exists){
         storedDonations.push(id);
+        donationPrice.push(price);
+        
         localStorage.setItem('donation', JSON.stringify(storedDonations));
+        
+        localStorage.setItem('price', JSON.stringify(donationPrice));
+
+        return true;
     }
+    return false; 
 }
 
-export { getStoredDonations, saveDonation}
+
+export { getStoredDonations, saveDonation, getDonationPrice}
 

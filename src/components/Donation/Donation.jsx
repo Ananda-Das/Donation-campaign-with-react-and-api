@@ -1,9 +1,8 @@
 // import React from 'react';
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
-import { getStoredDonations } from "../../utility/localstorage";
-// import DonationCard from "./DonationCard";
 import ShowDonationCard from "./ShowDonationCard";
+import { getStoredDonations } from "../../Utility/localStorage";
 
 const Donation = () => {
   const donations = useLoaderData();
@@ -17,14 +16,18 @@ const Donation = () => {
     const storedDonation = getStoredDonations();
     if (donations.length > 0) {
       const donated = [];
+
       for (const id of storedDonation) {
-        const donate = donations.find((donate) => donate.id === id);
+        const donate = donations.find((donate) => donate.id.toString() === id);
+        
         if (donate) {
           donated.push(donate);
+          console.log(donated);
         }
       }
 
       console.log(donations, storedDonation);
+      console.log(donated);
 
       setGiveDonation(donated);
       setDisplayDonation(donated);

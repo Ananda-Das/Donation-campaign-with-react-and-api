@@ -18,7 +18,8 @@ const DonationCard = ({data}) => {
                         <img className="h-48" src={image} alt="" />
                     </div>
                     <div className="p-5">
-                        <h1 style={{backgroundColor:btnBg,color:btnText}} className="font-medium w-24 text-center rounded-lg py-[6px]">{categories}</h1>
+                        <h1 style={{backgroundColor:btnBg,color:btnText}}
+                         className="font-medium w-24 text-center rounded-lg py-[6px]">{categories}</h1>
                         <h2 style={{color:textColor}} className="text-xl font-semibold">{title}</h2>
                     </div>
                 </div>
