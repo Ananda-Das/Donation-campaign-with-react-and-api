@@ -6,7 +6,7 @@
 const ShowDonationCard = ({ donation }) => {
   const { image, bgColor, title, categories, price, btnBg, btnText, detailsBtnText, textColor } = donation;
   return (
-    <div className="flex" style={{ backgroundColor: bgColor }}>
+    <div className="flex lg:flex-row flex-col" style={{ backgroundColor: bgColor }}>
         <img className="rounded-lg" src={image} alt="" />
       <div className="py-4 pl-4" >
         <p className="font-medium text-[14px] rounded-lg py-1 px-[10px] inline-block" style={{ backgroundColor: btnBg, color: btnText }}>{categories}</p>

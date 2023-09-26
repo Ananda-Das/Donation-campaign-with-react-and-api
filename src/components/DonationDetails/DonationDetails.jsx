@@ -12,7 +12,7 @@ const DonationDetails = () => {
 
   const donationDetails = donations.find((donation) => donation.id == idInt);
 
-  const { image, title, description, price, btnBg, } =  donationDetails;
+  const { image, title, description, price, textColor,detailsBtnText } =  donationDetails;
 
   const handleDonation = () => {
     const save = saveDonation(id, price);
@@ -26,11 +26,11 @@ const DonationDetails = () => {
   return (
     <div>
       <div>
-        <div className="w-[1000px] mx-auto">
+        <div className="w-[1000px] mx-auto py-10">
           <div>
             <img src={image} alt="" className="w-full mt-5" />
             <div className="h-[120px] absolute w-[1000px] mt-[-120px] bg-[#0B0B0B80] bg-opacity-50 bg-blend-overlay">
-              <button className="py-4 px-4 text-white my-7 mx-7 rounded-md" style={{backgroundColor:btnBg}} onClick={handleDonation}>
+              <button className="py-4 px-4 text-white my-7 mx-7 rounded-md" style={{ backgroundColor: textColor, color: detailsBtnText }} onClick={handleDonation}>
                 Donate ${price}
               </button>
             </div>

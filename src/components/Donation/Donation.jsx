@@ -38,7 +38,7 @@ const Donation = () => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-5 w-11/12 mx-auto py-5">
+      <div className="grid lg:grid-cols-2 grid-cols-1 gap-5 w-11/12 mx-auto py-5">
         {displayDonation.slice(0, dataLength).map((donation, id) => (
           <ShowDonationCard key={id} donation={donation}></ShowDonationCard>
         ))}
