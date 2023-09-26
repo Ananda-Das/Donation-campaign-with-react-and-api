@@ -26,8 +26,8 @@ const DonationDetails = () => {
         <div className="w-[1000px] mx-auto">
           <div>
             <img src={donationDetails.image} alt="" className="w-full mt-5" />
-            <div>
-              <button className="bg-[#FF444A] py-4 px-4 text-white rounded-md" onClick={handleDonation}>
+            <div className="h-[120px] absolute w-[1000px] mt-[-120px] bg-[#0B0B0B80] bg-opacity-50 bg-blend-overlay">
+              <button className="bg-[#FF444A] py-4 px-4 text-white my-7 mx-7 rounded-md" onClick={handleDonation}>
                 Donate ${donationDetails.price}
               </button>
             </div>
